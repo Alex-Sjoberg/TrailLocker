@@ -1,0 +1,31 @@
+﻿@using TrailLocker.Models
+@model IEnumerable<TrailLocker.Models.EquipmentModel>
+
+@{
+    ViewBag.Title = "Search";
+    List<SelectListItem> categories = new List<SelectListItem>();
+
+    categories.Add(new SelectListItem() { Text = "", Value = "", Selected = true });
+    
+    foreach (EquipmentCategory category in Enum.GetValues(typeof(EquipmentCategory)))
+    {
+        categories.Add(new SelectListItem() { Text = category.ToString(), Value = ((int)category).ToString() });
+    }    
+}
+
+<h2>Search</h2>
+
+
+@using (Html.BeginForm("Search", "Equipment", FormMethod.Get))
+{
+    <div>Name: @Html.TextBox("name")</div>
+    <div>Category: @Html.DropDownList("category", (IEnumerable<SelectListItem>)categories)</div>
+    <div>Weight Between: @Html.TextBox("minweight") and @Html.TextBox("maxweight")</div>
+    <div><input type="submit" value="Search" /></div>
+}
+
+@foreach (EquipmentModel item in Model)
+{
+    <div>@String.Format("{0} {1}kg {2}", item.Name, item.Weight, item.Category)</div>
+}
+

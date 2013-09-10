@@ -171,6 +171,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\EquipmentModel.cs" />
     <Compile Include="Models\EquipmentSearchModel.cs" />
+    <Compile Include="Models\TripModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -16,9 +16,23 @@ namespace TrailLocker.Controllers
             return View();
         }
 
-        // PUT: /Trip/AddTrip
-        [HttpPut]
-        public ActionResult AddTrip(string TripName, string DestinationName, DateTime StartDate, DateTime EndDate, double Latitude, double Longitude)
+        // POST: /Trip/AddTrip
+        [HttpPost]
+        public ActionResult AddTrip()
+        {
+            return View();
+        }
+
+        // POST: /Trip/EditTrip
+        [HttpPost]
+        public ActionResult EditTrip()
+        {
+            return View();
+        }
+
+        // POST: /Trip/DeleteTrip
+        [HttpPost]
+        public ActionResult DeleteTrip()
         {
             return View();
         }

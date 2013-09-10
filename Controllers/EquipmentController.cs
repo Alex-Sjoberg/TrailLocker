@@ -56,6 +56,7 @@ namespace TrailLocker.Controllers
             equipment.Add(new EquipmentModel(){Name = "Pizza", Weight = 120, Category = EquipmentCategory.Perishable, EquipmentID = 2});
             equipment.Add(new EquipmentModel(){Name = "Water Bottle", Weight = 10, Category = EquipmentCategory.Expendable, EquipmentID = 3});
             equipment.Add(new EquipmentModel(){Name = "Backpack", Weight = 50, Category = EquipmentCategory.Backpack, EquipmentID = 4});
+            equipment.Add(new EquipmentModel() { Name = "Chips", Weight = 5, Category = EquipmentCategory.Perishable, EquipmentID = 5 });
 
             return equipment.AsQueryable();
         }

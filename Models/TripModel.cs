@@ -7,7 +7,6 @@ namespace TrailLocker.Models
 {   
     public class Trip
     {
-       
         public String TripName { get; set; }
         public String DestinationName { get; set; }
         public DateTime StartDate { get; set; }

@@ -10,7 +10,7 @@ namespace TrailLocker.Models
         Backpack    = 0x00000001,
         Perishable  = 0x00000002,
         Expendable  = 0x00000003,
-        Other = 0x00000004
+        Other       = 0x00000004
     }
 
     //public enum EquipmentRating
@@ -21,5 +21,6 @@ namespace TrailLocker.Models
         public String Name { get; set; }
         public EquipmentCategory Category { get; set; }
         public Double Weight { get; set; }
+        public String Location { get; set; }
     }
 }

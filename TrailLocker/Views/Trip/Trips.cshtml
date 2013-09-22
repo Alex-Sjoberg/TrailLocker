@@ -1,0 +1,20 @@
+﻿@using TrailLocker.Models
+@model IEnumerable<TrailLocker.Models.TripModel>
+
+
+@{
+    ViewBag.Title = "Trips";
+}
+
+<h2>Trips</h2>
+
+@using (Html.BeginForm("AddTrip", "Trip", FormMethod.Get)){
+    <div><input type="submit" value="AddTrip" /></div>
+}
+
+<ul>
+@foreach (TripModel trip in Model)
+{
+    <li>@String.Format("{0} {1} {2}/{3}/{4}-{5}/{6}/{7}", trip.TripName ,trip.DestinationName, trip.StartMonth, trip.StartDay, trip.StartYear, trip.EndMonth, trip.EndDay, trip.EndYear)</li>
+}
+</ul>

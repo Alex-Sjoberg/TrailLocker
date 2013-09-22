@@ -1,0 +1,20 @@
+﻿@using TrailLocker.Models
+@model TrailLocker.Models.TripModel
+
+
+@{
+    ViewBag.Title = "AddTrip";
+    List<SelectListItem> month = new List<SelectListItem>();
+
+}
+
+<h2>Add A New Trip</h2>
+
+@using (Html.BeginForm("AddTrip", "Trip", FormMethod.Post))
+{
+    <div>Trip Name: @Html.TextBoxFor(model => model.TripName)</div>
+    <div>Destination: @Html.TextBoxFor(model => model.DestinationName)</div>
+    <div>Start Date: @Html.TextBoxFor(model => model.StartMonth) / @Html.TextBoxFor(model => model.StartDay) / @Html.TextBoxFor(model => model.StartYear)</div>
+    <div>End Date: @Html.TextBoxFor(model => model.EndMonth) / @Html.TextBoxFor(model => model.EndDay) / @Html.TextBoxFor(model => model.EndYear)</div>
+    <div><input type="submit" value="AddTrip" /></div>
+}

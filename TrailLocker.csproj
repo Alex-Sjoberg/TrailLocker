@@ -289,6 +289,10 @@
     <Content Include="Views\Equipment\Search.cshtml" />
     <Content Include="Views\Equipment\Test.cshtml" />
     <Content Include="Views\Trip\Trip.cshtml" />
+    <Content Include="Views\Equipment\Index.cshtml" />
+    <Content Include="Views\Equipment\Add.cshtml" />
+    <Content Include="Views\Equipment\Edit.cshtml" />
+    <Content Include="Views\Equipment\Default.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

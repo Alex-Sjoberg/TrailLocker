@@ -14,16 +14,16 @@
     <fieldset>
         <legend>Movie</legend>
 
-        @Html.HiddenFor(model => model.EquipmentID)
+        @*@Html.HiddenFor(model => model.EquipmentID)*@
         
         
-        @*<div class="editor-label">
+        <div class="editor-label">
             @Html.LabelFor(model => model.EquipmentID)
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.EquipmentID)
             @Html.ValidationMessageFor(model => model.EquipmentID)
-        </div>*@
+        </div>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Name)

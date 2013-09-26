@@ -40,7 +40,6 @@ namespace TrailLocker.Controllers
         public ActionResult Add(EquipmentModel equipmentModel)
         {
             equipmentRepository = readList(equipmentFile, equipmentRepository);
-            equipmentModel.EquipmentID = equipmentRepository.Count;
             equipmentRepository.Add(equipmentModel);
             writeList(equipmentFile, equipmentRepository);
             return RedirectToAction("Index");

@@ -32,24 +32,31 @@ namespace TrailLocker.Controllers
         [HttpPost]
         public ActionResult AddTrip(TripModel trip)
         {
-            Console.Out.Write(trip.DestinationName);
+            //Add trip to database
             return RedirectToAction("Trips");
         }
 
-       
-
-        // POST: /Trip/EditTrip
-        [HttpPost]
-        public ActionResult EditTrip()
+        //GET: /Trip/EditTrip
+        [HttpGet]
+        public ActionResult EditTrip(TripModel trip)
         {
-            return View();
+            return View(trip);
+        }
+
+        // POST: /Trip/EditTripInDatabase
+        [HttpPost]
+        public ActionResult EditTripInDatabase(TripModel trip)
+        {
+            //edit trip in database
+            return RedirectToAction("Trips");
         }
 
         // POST: /Trip/DeleteTrip
-        [HttpPost]
-        public ActionResult DeleteTrip()
+      
+        public ActionResult DeleteTrip(TripModel trip)
         {
-            return View();
+            //Delete trip from database
+            return RedirectToAction("Trips");
         }
 
         public List<TripModel> CreateTrips()

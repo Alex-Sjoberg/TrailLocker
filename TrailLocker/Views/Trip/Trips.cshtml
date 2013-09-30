@@ -15,6 +15,6 @@
 <ul>
 @foreach (TripModel trip in Model)
 {
-    <li>@String.Format("{0} {1} {2}/{3}/{4}-{5}/{6}/{7}", trip.TripName ,trip.DestinationName, trip.StartMonth, trip.StartDay, trip.StartYear, trip.EndMonth, trip.EndDay, trip.EndYear)</li>
+    <li>@String.Format("{0} {1} {2}/{3}/{4}-{5}/{6}/{7}", trip.TripName ,trip.DestinationName, trip.StartMonth, trip.StartDay, trip.StartYear, trip.EndMonth, trip.EndDay, trip.EndYear) @Html.ActionLink("Edit", "EditTrip", trip) @Html.ActionLink("Delete", "DeleteTrip", trip)</li>
 }
 </ul>

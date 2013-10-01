@@ -158,10 +158,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\InMemoryUnitOfWork.cs" />
-    <Compile Include="Data\IRepository.cs" />
-    <Compile Include="Data\IUnitOfWork.cs" />
-    <Compile Include="Data\Repository.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />

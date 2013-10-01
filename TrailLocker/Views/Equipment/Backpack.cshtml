@@ -1,0 +1,69 @@
+﻿@using TrailLocker.Models
+@model IEnumerable<TrailLocker.Models.EquipmentModel>
+
+@{
+    ViewBag.Title = "Backpack";
+    double totalWeight = 0;
+}
+
+<h2>Backpack</h2>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.ActionLink("Remove", "BackpackRemove", new { EquipmentID=item.EquipmentID })
+        </td>
+    </tr>
+}
+
+</table>
+
+@foreach (var item in Model) {
+    totalWeight += item.Weight;
+}
+
+<table>
+    <tr>
+        <th>
+            Backpack Weight
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @totalWeight
+        </td>
+    </tr>
+</table>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

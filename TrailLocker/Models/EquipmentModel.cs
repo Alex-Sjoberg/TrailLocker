@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.IO;
 
 namespace TrailLocker.Models
 {
@@ -19,8 +16,8 @@ namespace TrailLocker.Models
     }
 
     //public enum EquipmentRating
-    [Serializable()]
-    public class EquipmentModel : ISerializable
+
+    public class EquipmentModel
     {
         public Int32 EquipmentID { get; set; }
         public String Name { get; set; }
@@ -28,43 +25,6 @@ namespace TrailLocker.Models
         public Double Weight { get; set; }
         public String Location { get; set; }
         public Int32 Quantity { get; set; }
-        //is the item in the defualt equipment set?
-        public bool inDefault { get; set; }
-        //is the item in the backpack?
-        public bool inBackpack { get; set; }
-
-        public EquipmentModel()
-        {
-            EquipmentID = 0;
-            Name = null;
-            Category = EquipmentCategory.Other;
-            Weight = 0;
-            Location = null;
-            inDefault = false;
-            inBackpack = false;
-        }
-
-        public EquipmentModel(SerializationInfo info, StreamingContext ctxt)
-        {
-            this.EquipmentID = (int)info.GetValue("EquipmentID", typeof(int));
-            this.Name = (String)info.GetValue("Name", typeof(String));
-            this.Category = (EquipmentCategory)info.GetValue("Category", typeof(EquipmentCategory));
-            this.Weight = (double)info.GetValue("Weight", typeof(double));
-            this.Location = (String)info.GetValue("Location", typeof(String));
-            this.inDefault = (bool)info.GetValue("inDefault", typeof(bool));
-            this.inBackpack = (bool)info.GetValue("inBackpack", typeof(bool));
-        }
-
-        public void GetObjectData(SerializationInfo info, StreamingContext ctxt)
-        {
-            info.AddValue("EquipmentID", EquipmentID);
-            info.AddValue("Name", Name);
-            info.AddValue("Category", Category);
-            info.AddValue("Weight", Weight);
-            info.AddValue("Location", Location);
-            info.AddValue("inDefault", inDefault);
-            info.AddValue("inBackpack", inBackpack);
-        }
     }
 
     // DestinationImages

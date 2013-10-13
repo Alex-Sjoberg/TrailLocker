@@ -265,7 +265,6 @@
     <Content Include="Views\HTMLstuff\jquery-1.10.2.min.js" />
     <Content Include="Views\HTMLstuff\locker.html" />
     <Content Include="Views\HTMLstuff\navbar.png" />
-    <Content Include="Content\stylein.css" />
     <Content Include="Views\HTMLstuff\taillocker_logo_3000px_black.png" />
     <Content Include="Views\HTMLstuff\taillocker_logo_3000px_white.png" />
     <Content Include="Views\HTMLstuff\taillocker_symbol_3000px_white.png" />

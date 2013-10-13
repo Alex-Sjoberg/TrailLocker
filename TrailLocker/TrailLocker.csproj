@@ -176,6 +176,7 @@
     <Compile Include="Models\EquipmentSearchModel.cs" />
     <Compile Include="Models\TripModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\InFileUnitOfWork.cs" />
     <Compile Include="Repository\InMemoryUnitOfWork.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\IUnitOfWork.cs" />
@@ -239,6 +240,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\events.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -253,6 +256,20 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Views\HTMLstuff\08_BM_35_060.jpeg" />
+    <Content Include="Views\HTMLstuff\Background.png" />
+    <Content Include="Views\HTMLstuff\events.js" />
+    <Content Include="Views\HTMLstuff\facebook_login_button.png" />
+    <Content Include="Views\HTMLstuff\home.html" />
+    <Content Include="Views\HTMLstuff\index.html" />
+    <Content Include="Views\HTMLstuff\jquery-1.10.2.min.js" />
+    <Content Include="Views\HTMLstuff\locker.html" />
+    <Content Include="Views\HTMLstuff\navbar.png" />
+    <Content Include="Content\stylein.css" />
+    <Content Include="Views\HTMLstuff\taillocker_logo_3000px_black.png" />
+    <Content Include="Views\HTMLstuff\taillocker_logo_3000px_white.png" />
+    <Content Include="Views\HTMLstuff\taillocker_symbol_3000px_white.png" />
+    <Content Include="Views\HTMLstuff\tent.jpg" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -304,6 +321,13 @@
     <Content Include="Views\Equipment\Index.cshtml" />
     <Content Include="Views\Equipment\Default.cshtml" />
     <Content Include="Views\Equipment\Backpack.cshtml" />
+    <Content Include="Views\HTMLstuff\Lato-Lig.eot" />
+    <Content Include="Views\HTMLstuff\Lato-Lig.ttf" />
+    <Content Include="Views\HTMLstuff\Lato-Reg.eot" />
+    <Content Include="Views\HTMLstuff\Lato-Reg.ttf" />
+    <Content Include="Views\HTMLstuff\nwgthc.eot" />
+    <Content Include="Views\HTMLstuff\nwgthc.ttf" />
+    <Content Include="Views\HTMLstuff\taillocker_symbol_3000px_black.psd" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

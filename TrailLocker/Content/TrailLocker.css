@@ -211,7 +211,10 @@ html{
 }
 
 #facebook_login_button{
+		background-color: #3B5998;
+		height: 100;
 		width:200px;
+		padding:10px;
 		}
 
 

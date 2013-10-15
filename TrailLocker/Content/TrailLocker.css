@@ -22,13 +22,13 @@ html{
 
 @font-face{
 	font-family: Lato-Lig;
-	src: url('Content/Lato-Lig.ttf')
-		,url('Content/Lato-Lig.eot'); 
+	src: url('/Lato-Lig.ttf')
+		,url('/Lato-Lig.eot'); 
 }
 @font-face{
 	font-family: Lato-Reg;
-	src: url('Content/Lato-Reg.ttf')
-		,url('Content/Lato-Reg.eot'); 
+	src: url('/Lato-Reg.ttf')
+		,url('/Lato-Reg.eot'); 
 }
 
 *.center {

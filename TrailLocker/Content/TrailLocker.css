@@ -1,7 +1,7 @@
 ﻿body#index{
 	height:100%;
 	background-color:black;
-	background-image:url('~/Images/Background.png');
+	background-image:url('/Background.png');
 	background-position:  center;
 	background-repeat:no-repeat;
 }

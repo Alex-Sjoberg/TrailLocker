@@ -8,7 +8,7 @@
 body#home{
 	height:100%;
 	background-color:black;
-	background-image:url('../Images/08_BM_35_060.jpeg');
+	background-image:url('../Images/Background.png');
 	background-position:  center;
 	background-repeat:no-repeat;
 }

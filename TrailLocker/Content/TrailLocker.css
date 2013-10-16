@@ -211,7 +211,7 @@ html{
 }
 
 #facebook_login_button{
-		background: url(../Images/Background.png);
+		background-image:url(../Images/Background.png);
 		height: 100px;
 		width:200px;
 		padding:10px;

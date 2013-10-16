@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace COS340.TrailLocker.Data
+namespace TrailLocker.Models.Repository
 {
     public interface IUnitOfWork : IDisposable
     {
@@ -17,7 +17,5 @@ namespace COS340.TrailLocker.Data
         IQueryable<T> Get<T>() where T : class;
 
         bool Remove<T>(T item) where T : class;
-
-        void readData();
     }
 }

@@ -1,5 +1,5 @@
 ﻿@using TrailLocker.Models
-@model IEnumerable<TrailLocker.Models.EquipmentModel>
+@model IEnumerable<TrailLocker.Models.Entities.Equipment>
 
 @{
     ViewBag.Title = "Index";
@@ -30,11 +30,11 @@
             @Html.DisplayNameFor(model => model.Location)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.inDefault)
+            @Html.DisplayNameFor(model => model.IsDefault)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.inBackpack)
-        </th>
+        <!--<th>
+            //Html.DisplayNameFor(model => model.inBackpack)
+        </th>-->
         <th></th>
     </tr>
 
@@ -53,11 +53,11 @@
             @Html.DisplayFor(modelItem => item.Location)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.inDefault)
+            @Html.DisplayFor(modelItem => item.IsDefault)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.inBackpack)
-        </td>
+        <!--<td>
+            Html.DisplayFor(modelItem => item.inBackpack)
+        </td>-->
         <td>
             @Html.ActionLink("Edit", "Edit", new { EquipmentID=item.EquipmentID }) |
             @Html.ActionLink("Delete", "Delete", new { EquipmentID=item.EquipmentID })

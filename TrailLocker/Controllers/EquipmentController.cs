@@ -5,20 +5,21 @@ using System.Web;
 using System.Web.Mvc;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using COS340.TrailLocker.Data;
+//using COS340.TrailLocker.Data;
 using TrailLocker.Models;
+
+using TrailLocker.Models.Repository;
+using TrailLocker.Models.Entities;
 
 namespace TrailLocker.Controllers
 {
     public class EquipmentController : Controller
     {
-        Repository<EquipmentModel> equipmentRepository;
-        InMemoryUnitOfWork unitOfWork;
+        Repository<Equipment> equipmentRepository;
 
         public EquipmentController()
         {
-            unitOfWork = new InMemoryUnitOfWork();
-            equipmentRepository = new Repository<EquipmentModel>(unitOfWork);
+            equipmentRepository = new Repository<Equipment>(new DatabaseUnitOfWork());
         }
 
         //
@@ -26,7 +27,7 @@ namespace TrailLocker.Controllers
 
         public ActionResult Index()
         {
-            equipmentRepository.readData();
+            //equipmentRepository.readData();
             return View(equipmentRepository.FindAll());
         }
 
@@ -35,8 +36,9 @@ namespace TrailLocker.Controllers
 
         public ActionResult Default()
         {
-            equipmentRepository.readData();
-            return View(equipmentRepository.FindBy(x => x.inDefault == true));
+            //equipmentRepository.readData();
+            //return View(equipmentRepository.FindBy(x => x.inDefault == true));
+            return View();
         }
 
         //
@@ -44,10 +46,10 @@ namespace TrailLocker.Controllers
 
         public ActionResult DefaultRemove(int EquipmentID = 0)
         {
-            equipmentRepository.readData();
-            EquipmentModel item = equipmentRepository.FindBy(x => x.EquipmentID == EquipmentID).Single();
-            item.inDefault = false;
-            equipmentRepository.Commit();
+            //equipmentRepository.readData();
+            //EquipmentModel item = equipmentRepository.FindBy(x => x.EquipmentID == EquipmentID).Single();
+            //item.inDefault = false;
+            //equipmentRepository.Commit();
             return RedirectToAction("Default");
         }
 
@@ -56,8 +58,9 @@ namespace TrailLocker.Controllers
 
         public ActionResult Backpack()
         {
-            equipmentRepository.readData();
-            return View(equipmentRepository.FindBy(x => x.inBackpack == true));
+            //equipmentRepository.readData();
+            //return View(equipmentRepository.FindBy(x => x.inBackpack == true));
+            return View();
         }
 
         //
@@ -65,10 +68,10 @@ namespace TrailLocker.Controllers
 
         public ActionResult BackpackRemove(int EquipmentID = 0)
         {
-            equipmentRepository.readData();
-            EquipmentModel item = equipmentRepository.FindBy(x => x.EquipmentID == EquipmentID).Single();
-            item.inBackpack = false;
-            equipmentRepository.Commit();
+            //equipmentRepository.readData();
+            //EquipmentModel item = equipmentRepository.FindBy(x => x.EquipmentID == EquipmentID).Single();
+            //item.inBackpack = false;
+            //equipmentRepository.Commit();
             return RedirectToAction("Backpack");
         }
 
@@ -87,9 +90,9 @@ namespace TrailLocker.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Add(EquipmentModel equipmentModel)
         {
-            equipmentRepository.readData();
-            equipmentRepository.Add(equipmentModel);
-            equipmentRepository.Commit();
+            //equipmentRepository.readData();
+            //equipmentRepository.Add(equipmentModel);
+            //equipmentRepository.Commit();
             return RedirectToAction("Index");
         }
 
@@ -98,13 +101,14 @@ namespace TrailLocker.Controllers
 
         public ActionResult Edit(int EquipmentID = 0)
         {
-            equipmentRepository.readData();
-            EquipmentModel equipmentModel = equipmentRepository.FindBy(x => x.EquipmentID == EquipmentID).Single();
-            if (equipmentModel == null)
-            {
-                return HttpNotFound();
-            }
-            return View(equipmentModel);
+            //equipmentRepository.readData();
+            //EquipmentModel equipmentModel = equipmentRepository.FindBy(x => x.EquipmentID == EquipmentID).Single();
+            //if (equipmentModel == null)
+            //{
+            //    return HttpNotFound();
+            //}
+            //return View(equipmentModel);
+            return View();
         }
 
         //
@@ -114,11 +118,11 @@ namespace TrailLocker.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(EquipmentModel equipmentModel)
         {
-            equipmentRepository.readData();
-            EquipmentModel removeItem = equipmentRepository.FindBy(x => x.EquipmentID == equipmentModel.EquipmentID).Single();
-            equipmentRepository.Remove(removeItem);
-            equipmentRepository.Add(equipmentModel);
-            equipmentRepository.Commit();
+            //equipmentRepository.readData();
+            //EquipmentModel removeItem = equipmentRepository.FindBy(x => x.EquipmentID == equipmentModel.EquipmentID).Single();
+            //equipmentRepository.Remove(removeItem);
+            //equipmentRepository.Add(equipmentModel);
+            //equipmentRepository.Commit();
             return RedirectToAction("Index");
         }
 
@@ -127,11 +131,11 @@ namespace TrailLocker.Controllers
 
         public ActionResult Delete(int EquipmentID = 0)
         {
-            equipmentRepository.readData();
-            EquipmentModel removeItem = equipmentRepository.FindBy(x => x.EquipmentID == EquipmentID).Single();
-            System.Diagnostics.Debug.Print(removeItem.ToString());
-            equipmentRepository.Remove(removeItem);
-            equipmentRepository.Commit();
+            //equipmentRepository.readData();
+            //EquipmentModel removeItem = equipmentRepository.FindBy(x => x.EquipmentID == EquipmentID).Single();
+            //System.Diagnostics.Debug.Print(removeItem.ToString());
+            //equipmentRepository.Remove(removeItem);
+            //equipmentRepository.Commit();
             return RedirectToAction("Index");
         }
 
@@ -167,11 +171,11 @@ namespace TrailLocker.Controllers
         {
             List<EquipmentModel> equipment = new List<EquipmentModel>();
 
-            equipment.Add(new EquipmentModel(){Name = "Sleeping Bag", Weight = 2.0, Category = EquipmentCategory.Other, EquipmentID = 1});
-            equipment.Add(new EquipmentModel(){Name = "Pizza", Weight = 120, Category = EquipmentCategory.Perishable, EquipmentID = 2});
-            equipment.Add(new EquipmentModel(){Name = "Water Bottle", Weight = 10, Category = EquipmentCategory.Expendable, EquipmentID = 3});
-            equipment.Add(new EquipmentModel(){Name = "Backpack", Weight = 50, Category = EquipmentCategory.Backpack, EquipmentID = 4});
-            equipment.Add(new EquipmentModel() { Name = "Chips", Weight = 5, Category = EquipmentCategory.Perishable, EquipmentID = 5 });
+            //equipment.Add(new EquipmentModel(){Name = "Sleeping Bag", Weight = 2.0, Category = EquipmentCategory.Other, EquipmentID = 1});
+            //equipment.Add(new EquipmentModel(){Name = "Pizza", Weight = 120, Category = EquipmentCategory.Perishable, EquipmentID = 2});
+            //equipment.Add(new EquipmentModel(){Name = "Water Bottle", Weight = 10, Category = EquipmentCategory.Expendable, EquipmentID = 3});
+            //equipment.Add(new EquipmentModel(){Name = "Backpack", Weight = 50, Category = EquipmentCategory.Backpack, EquipmentID = 4});
+            //equipment.Add(new EquipmentModel() { Name = "Chips", Weight = 5, Category = EquipmentCategory.Perishable, EquipmentID = 5 });
 
             return equipment.AsQueryable();
         }

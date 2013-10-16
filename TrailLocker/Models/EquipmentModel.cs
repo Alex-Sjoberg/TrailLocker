@@ -8,14 +8,15 @@ using System.IO;
 
 namespace TrailLocker.Models
 {
+
     public enum EquipmentCategory
     {
+        General     = 0x00000000,
         Backpack    = 0x00000001,
         Perishable  = 0x00000002,
         Expendable  = 0x00000003,
         Tent        = 0x00000004,
         SleepingBag = 0x00000005,
-        Other       = 0x00000006
     }
 
     //public enum EquipmentRating
@@ -37,7 +38,7 @@ namespace TrailLocker.Models
         {
             EquipmentID = 0;
             Name = null;
-            Category = EquipmentCategory.Other;
+            Category = EquipmentCategory.General;
             Weight = 0;
             Location = null;
             inDefault = false;
@@ -71,24 +72,17 @@ namespace TrailLocker.Models
     // Destiation Coordinates
     // 
 
+    /// <summary>
+    /// A general piece of equipment. No specific behaviour defined.
+    /// </summary>
+    public class GeneralEquipmentModel : EquipmentModel
+    {
+        //TrailLocker.Models.
+    }
+
     public class BackpackEquipmentModel : EquipmentModel
     {
         public Double Capacity { get; set; }
-
-        //public String Size
-        //{
-        //    get
-        //    {
-        //        //if (Volume < 20.0)
-        //        //{
-        //        //    return "Small";
-        //        //}
-        //        //else if (Volume < 50.0)
-        //        //{
-        //        //    return "Medium";
-        //        //}
-        //    }
-        //}
     }
 
     public class PerishableEquipmentModel : EquipmentModel

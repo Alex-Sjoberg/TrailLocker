@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace COS340.TrailLocker.Data
+namespace TrailLocker.Models.Repository
 {
     public interface IRepository<T> : IDisposable 
         where T : class
@@ -48,7 +48,7 @@ namespace COS340.TrailLocker.Data
         /// </summary>
         void Commit();
 
-        void readData();
+        //void readData();
 
     }
 }

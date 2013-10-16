@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace COS340.TrailLocker.Data
+namespace TrailLocker.Models.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
@@ -46,10 +46,10 @@ namespace COS340.TrailLocker.Data
             UnitOfWork.Commit();
         }
 
-        public void readData()
-        {
-            UnitOfWork.readData();
-        }
+        //public void readData()
+        //{
+        //    UnitOfWork.readData();
+        //}
 
         #region IDisposable Members
 

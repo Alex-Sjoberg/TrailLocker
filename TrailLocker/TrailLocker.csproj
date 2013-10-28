@@ -182,11 +182,6 @@
     <Compile Include="Models\EquipmentSearchModel.cs" />
     <Compile Include="Models\TripModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\InFileUnitOfWork.cs" />
-    <Compile Include="Repository\InMemoryUnitOfWork.cs" />
-    <Compile Include="Repository\IRepository.cs" />
-    <Compile Include="Repository\IUnitOfWork.cs" />
-    <Compile Include="Repository\Repository.cs" />
     <Compile Include="Models\Repository\DatabaseUnitOfWork.cs" />
     <Compile Include="Models\Repository\InMemoryUnitOfWork.cs" />
     <Compile Include="Models\Repository\IRepository.cs" />
@@ -340,10 +335,11 @@
     <Content Include="Content\nwgthc.eot" />
     <Content Include="Content\nwgthc.ttf" />
     <Content Include="Views\HTMLstuff\taillocker_symbol_3000px_black.psd" />
+    <Content Include="Views\Equipment\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_EquipmentLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Repository\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

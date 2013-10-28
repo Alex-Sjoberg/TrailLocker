@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Scripts.Render("~/bundles/modernizr")
+        <script src="Scripts/jquery-1.10.2.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="Content/TrailLocker.css"/>
+        <script src="Scripts/events.js"></script>
+        <title>Trail Locker</title>
+    </head>
+    <body id="Locker">
+        <header>
+            <div id="nav_bar_locker_top">
+			    <img id="Locker_Logo_in_nav" src="~/Images/traillocker_logo_3000px_white.png" alt="Logo_Up_left" />
+			
+			    <nav>
+                    <ul id="menu">
+                        <li>@Html.ActionLink("MyLocker","Index","Equipment")</li>
+                        <li>@Html.ActionLink("Plan Trip","Index","Trip")</li>
+                        <li>@Html.ActionLink("FriendShips", "Index","Friends")</li>
+                    </ul>
+               </nav>
+			
+		    </div>
+          
+        </header>
+        <div id="body">
+            <div id="nav_bar_locker_left">
+			    <ul >
+			       @RenderSection("leftbar")
+			    </ul>
+			
+		    </div>
+
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+
+        <footer>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

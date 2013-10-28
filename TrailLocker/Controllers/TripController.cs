@@ -73,7 +73,6 @@ namespace TrailLocker.Controllers
 
         public ActionResult DeleteTrip(Trip trip)
         {
-            //Delete trip from database
             tripRepository.Remove(trip);
             return RedirectToAction("Trips");
         }

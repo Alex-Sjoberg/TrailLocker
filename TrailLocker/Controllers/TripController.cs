@@ -13,6 +13,7 @@ using TrailLocker.Models;
 
 namespace TrailLocker.Controllers
 {
+    //[Authorize]
     //public class TripController : Controller
     //{
     //    Repository<TripModel> tripRepository;

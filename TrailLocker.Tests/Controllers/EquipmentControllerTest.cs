@@ -19,7 +19,7 @@ namespace TrailLocker.Tests.Controllers
         {
             List<EquipmentModel> temp = new List<EquipmentModel>();
 
-            temp.Add(new EquipmentModel() { Name = "Sleeping Bag", Weight = 2.0, Category = EquipmentCategory.Other, EquipmentID = 1 });
+            temp.Add(new EquipmentModel() { Name = "Sleeping Bag", Weight = 2.0, Category = EquipmentCategory.General, EquipmentID = 1 });
             temp.Add(new EquipmentModel() { Name = "Pizza", Weight = 120, Category = EquipmentCategory.Perishable, EquipmentID = 2 });
             temp.Add(new EquipmentModel() { Name = "Water Bottle", Weight = 10, Category = EquipmentCategory.Expendable, EquipmentID = 3 });
             temp.Add(new EquipmentModel() { Name = "Backpack", Weight = 50, Category = EquipmentCategory.Backpack, EquipmentID = 4 });

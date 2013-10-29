@@ -13,6 +13,7 @@ using TrailLocker.Models.Entities;
 
 namespace TrailLocker.Controllers
 {
+    [Authorize]
     public class EquipmentController : Controller
     {
         Repository<Equipment> equipmentRepository;

@@ -264,9 +264,14 @@
     <Content Include="Content\nwgthc.eot" />
     <Content Include="Content\nwgthc.ttf" />
     <Content Include="Views\HTMLstuff\taillocker_symbol_3000px_black.psd" />
+    <Content Include="Views\Equipment\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_EquipmentLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

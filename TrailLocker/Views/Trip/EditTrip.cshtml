@@ -1,5 +1,5 @@
 ﻿@using TrailLocker.Models
-@model TrailLocker.Models.TripModel
+@model TrailLocker.Models.Entities.Trip
 
 
 @{
@@ -11,9 +11,9 @@
 
 @using (Html.BeginForm("EditTripInDatabase", "Trip", FormMethod.Post))
 {
-    <div>Trip Name: @Html.EditorFor(model => model.TripName)</div>
-    <div>Destination: @Html.EditorFor(model => model.DestinationName)</div>
-    <div>Start Date: @Html.EditorFor(model => model.StartMonth) / @Html.EditorFor(model => model.StartDay) / @Html.EditorFor(model => model.StartYear)</div>
-    <div>End Date: @Html.EditorFor(model => model.EndMonth) / @Html.EditorFor(model => model.EndDay) / @Html.EditorFor(model => model.EndYear)</div>
+    //<div>Trip Name: @Html.EditorFor(model => model.TripName)</div>
+    <div>Destination: @Html.EditorFor(model => model.DestinationID)</div>
+    <div>Start Date: @Html.EditorFor(model => model.StartDate)</div>
+    <div>End Date: @Html.EditorFor(model => model.EndDate)</div>
     <div><input type="submit" value="EditTrip" /></div>
 }

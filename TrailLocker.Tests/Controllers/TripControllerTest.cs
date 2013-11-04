@@ -78,7 +78,8 @@ namespace TrailLocker.Tests.Controllers
         {
             TripController controller = new TripController(repo);
             Trip trip2changed = new Trip() { TripID = 2, DestinationID = 1, StartDate = new DateTime(2013, 12, 1), EndDate = new DateTime(2013, 12, 3) };
-            ViewResult result = controller.EditTripInDatabase(trip2changed) as ViewResult;
+            controller.EditTripInDatabase(trip2changed);
+            ViewResult result = controller.Trips() as ViewResult;
             Assert.IsNotNull(result);
             IEnumerable<Trip> model = result.Model as IEnumerable<Trip>;
             Assert.AreEqual(2, model.Count());
@@ -90,7 +91,8 @@ namespace TrailLocker.Tests.Controllers
         public void DeleteTripShouldRemoveTrip()
         {
             TripController controller = new TripController(repo);
-            ViewResult result = controller.DeleteTrip(trip2) as ViewResult;
+            controller.DeleteTrip(trip2);
+            ViewResult result = controller.Trips() as ViewResult;
             Assert.IsNotNull(result);
             IEnumerable<Trip> model = result.Model as IEnumerable<Trip>;
             Assert.AreEqual(1, model.Count());

@@ -1,6 +1,11 @@
 ﻿@using TrailLocker.Models
 @model IEnumerable<TrailLocker.Models.EquipmentModel>
 
+@section leftbar {
+
+}
+
+
 @{
     ViewBag.Title = "Search";
     List<SelectListItem> categories = new List<SelectListItem>();
@@ -12,6 +17,7 @@
         categories.Add(new SelectListItem() { Text = category.ToString(), Value = ((int)category).ToString() });
     }    
 }
+
 
 <h2>Search</h2>
 

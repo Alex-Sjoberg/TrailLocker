@@ -8,8 +8,8 @@
 		
 <div id="form">
 	PLAN YOUR NEXT EXPEDITION		<br /><br /><br /><br /><br />
-    <form action="@Url.Action("ExternalLogin", "Account", new { ReturnUrl = Url.Action("Index", "Equipment") })", method="post">
+    <form action="@Url.Action("ExternalLogin", "Account", new { ReturnUrl = ViewBag.ReturnUrl })", method="post">
         @Html.AntiForgeryToken()
-	    <button id="facebook_login_button" type="submit" name="provider" value="facebook" id="facebook_login_button" href="@Url.Action("ExternalLogin", "Account", new { ReturnUrl = ViewBag.ReturnUrl })"></button>
+	    <button id="facebook_login_button" type="submit" name="provider" value="facebook" id="facebook_login_button"></button>
 	</form>	
 </div>

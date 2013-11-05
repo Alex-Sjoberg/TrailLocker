@@ -15,6 +15,7 @@ using TrailLocker.Models.Repository;
 
 namespace TrailLocker.Controllers
 {
+    [Authorize]
     public class TripController : Controller
     {
         Repository<Trip> tripRepository;

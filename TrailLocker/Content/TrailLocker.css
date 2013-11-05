@@ -20,6 +20,65 @@ html{
 	min-height:100%;position:relative
 }
 
+body {
+    	margin: 0;
+    	font-family: "Lato-Reg", sans-serif;
+    	background-color: #fff;
+
+	}
+
+#header {
+	    width: 100%;
+	    height: 75px;
+	    background-color: #000;
+
+	}
+
+	#header_in {
+		width: 960px;
+	    height: 75px;
+	    margin: auto;
+	    position: relative;
+	}
+
+	#menu {
+		left: 00px;
+		margin-right: 0px;
+
+	}
+
+	#menu ul li {
+		float: left;
+		display: inline;
+	}
+
+	#menu ul li a {
+		color: #fff;
+		font-weight: 300;
+		font-size: 70%;
+		text-transform: uppercase;
+		text-decoration: none;
+		letter-spacing: 1px;
+		display: block;
+		padding: 29px 10px 0 10px;
+		height: 46px;
+		border-left: 2px solid #fff;
+	}
+
+	#menu li.EndDivider {
+		border-right: 2px solid #fff;
+	}
+
+	#menu ul li a:hover {
+		border-top: 10px solid #fff;
+		padding: 19px 10px 0 10px;
+	}
+
+	#menu ul li a.active {
+		border-top: 10px solid #fff;
+		padding: 19px 10px 0 10px;
+	}
+
 @font-face{
 	font-family: Lato-Lig;
 	src: url('../Content/Lato-Lig.ttf')
@@ -54,9 +113,9 @@ html{
 		
 	}
 	#Logo_in_nav{
-		position:relative;
-		Width:90%;
-		padding:5%;
+		float:left;
+		height:90%;
+		margin:3px;
 	}
 	
 	#Locker_Logo_in_nav{
@@ -144,11 +203,11 @@ html{
 			
 	}
 	#Logo_in_nav{
-		position:relative;
-		
+		float:left;
 		height:90%;
-		
-		}
+		margin:3px;
+
+	}
 		
 	#form{
 		font-size:20px;
@@ -214,8 +273,8 @@ html{
 		background-image:url('../Images/facebook_login_button.png');
 		background-repeat: no-repeat;
 		background-size: 260px;
-		height: 60px;
-		width:360px;
+		height: 45px;
+		width: 260px;
 		margin: 0 auto;
 		display: block;
 		}

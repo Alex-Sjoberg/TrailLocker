@@ -64,7 +64,7 @@ namespace TrailLocker.Models.Repository
             where T : class
         {
             Table<T> table = GetTable<T>();
-
+            table.Attach(item);
             table.DeleteOnSubmit(item);
 
             // What should we be returning here?

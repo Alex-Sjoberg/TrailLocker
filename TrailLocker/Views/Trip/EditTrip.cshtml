@@ -15,5 +15,6 @@
     <div>Destination: @Html.EditorFor(model => model.DestinationID)</div>
     <div>Start Date: @Html.EditorFor(model => model.StartDate)</div>
     <div>End Date: @Html.EditorFor(model => model.EndDate)</div>
+    @Html.HiddenFor(model => model.TripID)
     <div><input type="submit" value="EditTrip" /></div>
 }

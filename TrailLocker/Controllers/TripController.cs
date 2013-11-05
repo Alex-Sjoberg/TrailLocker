@@ -51,6 +51,7 @@ namespace TrailLocker.Controllers
         {
             //Add trip to database
             tripRepository.Add(trip);
+            tripRepository.Commit();
             return RedirectToAction("Index");
         }
 
@@ -66,15 +67,16 @@ namespace TrailLocker.Controllers
         public ActionResult EditTripInDatabase(Trip trip)
         {
             tripRepository.Attach(trip);
-            return RedirectToAction("Trips");
+            tripRepository.Commit();
+            return RedirectToAction("Index");
         }
 
-        // POST: /Trip/DeleteTrip
-
+        // GET: /Trip/DeleteTrip
         public ActionResult DeleteTrip(Trip trip)
         {
             tripRepository.Remove(trip);
-            return RedirectToAction("Trips");
+            tripRepository.Commit();
+            return RedirectToAction("Index");
         }
 
     }

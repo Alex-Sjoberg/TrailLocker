@@ -12,16 +12,19 @@
     </head>
     <body id="Locker">
         <header>
-            <div id="nav_bar_locker_top">
-			    <img id="Locker_Logo_in_nav" src="~/Images/traillocker_logo_3000px_white.png" alt="Logo_Up_left" />
+            <div id="header">
+			    <img id="Logo_in_nav" src="~/Images/traillocker_logo_3000px_white.png" alt="Logo_Up_left" />
 			
-			    <nav>
-                    <ul id="menu">
-                        <li>@Html.ActionLink("MyLocker","Index","Equipment")</li>
-                        <li>@Html.ActionLink("Plan Trip","Index","Trip")</li>
-                        <li>@Html.ActionLink("FriendShips", "Index","Friends")</li>
-                    </ul>
-               </nav>
+			    <div id="header_in">
+                    <div id="menu">
+                        <ul>
+                            <li>@Html.ActionLink("MyLocker","Index","Equipment")</li>
+                            <li>@Html.ActionLink("Plan Trip","Index","Trip")</li>
+                            <li class="EndDivider">@Html.ActionLink("Search", "Search","Equipment")</li>
+                        </ul>
+
+			        </div>
+               </div>
 			
 		    </div>
           
@@ -34,9 +37,11 @@
 			
 		    </div>
 
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
+            <div id="box_box">
+                <section class="content-wrapper main-content clear-fix">
+                    @RenderBody()
+                </section>
+            </div>
         </div>
 
         <footer>

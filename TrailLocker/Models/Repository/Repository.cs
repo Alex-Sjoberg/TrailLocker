@@ -33,7 +33,7 @@ namespace TrailLocker.Models.Repository
 
         public void Attach(T item, bool setToChanged = true)
         {
-            UnitOfWork.Attach((object)item, setToChanged);
+            UnitOfWork.Attach(item, setToChanged);
         }
 
         public void Remove(T item)

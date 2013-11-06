@@ -193,6 +193,7 @@
     <Content Include="Global.asax" />
     <Content Include="Images\traillocker_logo_3000px_black.png" />
     <Content Include="Images\traillocker_logo_3000px_white.png" />
+    <Content Include="Images\traillocker_logo_300px_white.gif" />
     <Content Include="Images\traillocker_symbol_3000px_white.png" />
     <Content Include="Scripts\events.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

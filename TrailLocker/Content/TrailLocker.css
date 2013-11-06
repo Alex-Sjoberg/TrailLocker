@@ -1,4 +1,26 @@
-﻿body#index{
+﻿@font-face{
+	font-family: Lato-Lig;
+	src: url('Lato-Lig.ttf')
+		,url('Lato-Lig.eot'); 
+}
+@font-face{
+	font-family: Lato-Reg;
+	src: url('Lato-Reg.ttf')
+		,url('Lato-Reg.eot'); 
+}
+
+html{
+	min-height:100%;position:relative
+}
+
+body {
+    margin: 0;
+    font-family: "Lato-Reg", sans-serif;
+    background-color: #fff;
+
+}
+
+body#index{
 	height:100%;
 	background-color:black;
 	background-image:url('../Images/Background.png');
@@ -12,20 +34,7 @@ body#home{
 	background-position:  center;
 	background-repeat:no-repeat;
 }
-body#Locker{
-	background-color:white;
-}
 
-html{
-	min-height:100%;position:relative
-}
-
-body {
-    	margin: 0;
-    	font-family: "Lato-Reg", sans-serif;
-    	background-color: #fff;
-
-	}
 
 #header {
 	    width: 100%;
@@ -34,61 +43,51 @@ body {
 
 	}
 
-	#header_in {
-		width: 960px;
-	    height: 75px;
-	    margin: auto;
-	    position: relative;
-	}
-
-	#menu {
-		left: 00px;
-		margin-right: 0px;
-
-	}
-
-	#menu ul li {
-		float: left;
-		display: inline;
-	}
-
-	#menu ul li a {
-		color: #fff;
-		font-weight: 300;
-		font-size: 70%;
-		text-transform: uppercase;
-		text-decoration: none;
-		letter-spacing: 1px;
-		display: block;
-		padding: 29px 10px 0 10px;
-		height: 46px;
-		border-left: 2px solid #fff;
-	}
-
-	#menu li.EndDivider {
-		border-right: 2px solid #fff;
-	}
-
-	#menu ul li a:hover {
-		border-top: 10px solid #fff;
-		padding: 19px 10px 0 10px;
-	}
-
-	#menu ul li a.active {
-		border-top: 10px solid #fff;
-		padding: 19px 10px 0 10px;
-	}
-
-@font-face{
-	font-family: Lato-Lig;
-	src: url('../Content/Lato-Lig.ttf')
-		,url('../Content/Lato-Lig.eot'); 
+#header_in {
+	width: 960px;
+	height: 75px;
+	margin: auto;
+	position: relative;
 }
-@font-face{
-	font-family: Lato-Reg;
-	src: url('../Content/Lato-Reg.ttf')
-		,url('../Content/Lato-Reg.eot'); 
+
+#menu {
+	left: 00px;
+	margin-right: 0px;
+
 }
+
+#menu ul li {
+	float: left;
+	display: inline;
+}
+
+#menu ul li a {
+	color: #fff;
+	font-weight: 300;
+	font-size: 70%;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	display: block;
+	padding: 29px 10px 0 10px;
+	height: 46px;
+	border-left: 2px solid #fff;
+}
+
+#menu li.EndDivider {
+	border-right: 2px solid #fff;
+}
+
+#menu ul li a:hover {
+	border-top: 10px solid #fff;
+	padding: 19px 10px 0 10px;
+}
+
+#menu ul li a.active {
+	border-top: 10px solid #fff;
+	padding: 19px 10px 0 10px;
+}
+
 
 *.center {
 	text-align:center; 
@@ -103,10 +102,9 @@ body {
 	color:white; 
 	list-style-type:none;
 	left:0px;
-	}
+}
 
 
-@media (min-width: 500px) {
 	#Logo_Up_left{
 		position:relative;
 		Width:150px;
@@ -189,85 +187,20 @@ body {
 		}
 		
 }
-
-
-
-@media (max-width: 499px){
-	#center_logo{
-		text-align:center;
-	}
-	#Logo_Up_left{
-		margin-left:auto;
-		margin-right:auto;
-		Width:150px;
-			
-	}
-	#Logo_in_nav{
-		float:left;
-		height:90%;
-		margin:3px;
-
-	}
 		
-	#form{
-		font-size:20px;
-		font-family:Lato-Lig;
-		position:relative;
-		display:none;
-		text-align:center;
-		margin-left: auto;
-		margin-right:auto;
-		width:250px;
-		height:200px;
-		background: -moz-linear-gradient(top, rgba(255,255,255,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, rgba(255,255,255,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, rgba(255,255,255,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top, rgba(255,255,255,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
-		background: linear-gradient(to bottom, rgba(255,255,255,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6ffffff', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-	}
-	
-	#nav_bar_footer{
-		position:absolute;
-		height:100px;
-   		width:1000px;
-   		bottom:0;
-   		left:0;
-   		overflow:hidden;
-   		z-index:-1;
-		background: -moz-linear-gradient(top, rgba(58,58,58,0.6) 0%, rgba(58,58,58,0.6) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(58,58,58,0.6)), color-stop(100%,rgba(58,58,58,0.6))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, rgba(58,58,58,0.6) 0%,rgba(58,58,58,0.6) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, rgba(58,58,58,0.6) 0%,rgba(58,58,58,0.6) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top, rgba(58,58,58,0.6) 0%,rgba(58,58,58,0.6) 100%); /* IE10+ */
-		background: linear-gradient(to bottom, rgba(58,58,58,0.6) 0%,rgba(58,58,58,0.6) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#993a3a3a', endColorstr='#993a3a3a',GradientType=0 ); /* IE6-9 */
-	}
-	#nav_bar{
-		display:none;
-	}
-	
-	#nav_bar_locker_top{
-		display:none;
-	}
-	#nav_bar_locker_bottom{
-		position:absolute;
-		height:100px;
-   		width:1000px;
-   		bottom:0;
-   		left:0;
-   		overflow:hidden;
-   		z-index:-1;
-		background: -moz-linear-gradient(top, rgba(58,58,58,0.6) 0%, rgba(58,58,58,0.6) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(58,58,58,0.6)), color-stop(100%,rgba(58,58,58,0.6))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, rgba(58,58,58,0.6) 0%,rgba(58,58,58,0.6) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, rgba(58,58,58,0.6) 0%,rgba(58,58,58,0.6) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top, rgba(58,58,58,0.6) 0%,rgba(58,58,58,0.6) 100%); /* IE10+ */
-		background: linear-gradient(to bottom, rgba(58,58,58,0.6) 0%,rgba(58,58,58,0.6) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#993a3a3a', endColorstr='#993a3a3a',GradientType=0 ); /* IE6-9 */
-	}
+#form{
+	font-size:20px;
+	font-family:Lato-Lig;
+	position:relative;
+	display:none;
+	text-align:center;
+	margin-left: auto;
+	margin-right:auto;
+	width:250px;
+	height:200px;
 }
+	
+
 
 #facebook_login_button{
 		background-image:url('../Images/facebook_login_button.png');
@@ -277,7 +210,7 @@ body {
 		width: 260px;
 		margin: 0 auto;
 		display: block;
-		}
+	}
 
 
 

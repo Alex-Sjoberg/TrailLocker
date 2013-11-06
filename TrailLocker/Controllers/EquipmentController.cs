@@ -39,7 +39,7 @@ namespace TrailLocker.Controllers
         {
             //equipmentRepository.readData();
             //return View(equipmentRepository.FindBy(x => x.inDefault == true));
-            return View();
+            return View(equipmentRepository.FindBy(x => x.IsDefault == true));
         }
 
         //
@@ -57,12 +57,12 @@ namespace TrailLocker.Controllers
         //
         // GET: /Equipment/backpack
 
-        public ActionResult Backpack()
-        {
-            //equipmentRepository.readData();
-            //return View(equipmentRepository.FindBy(x => x.inBackpack == true));
-            return View();
-        }
+        //public ActionResult Backpack()
+        //{
+        //    //equipmentRepository.readData();
+        //    //return View(equipmentRepository.FindBy(x => x.inBackpack == true));
+        //    return View();
+        //}
 
         //
         // GET: /Equipment/BackpackRemove/5

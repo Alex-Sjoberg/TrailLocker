@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Scripts.Render("~/bundles/modernizr")
+        <script src="Scripts/jquery-1.10.2.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/Content/TrailLocker.css"/>
+        <script src="Scripts/events.js"></script>
+        <title>Trail Locker</title>
+    </head>
+    <body id="Locker">
+        <header>
+            <div id="header">
+			    <img id="Logo_in_nav" src="~/Images/traillocker_logo_300px_white.gif" alt="Logo_Up_left" />
+                        @{string ctrName = ViewContext.RouteData.Values["action"].ToString();}
+                        <ul>
+                            <li @if(ctrName=="Index"){<text> class="active"</text>}>@Html.ActionLink("MyLocker","Index","Equipment")</li>
+                            <li>@Html.ActionLink("Plan Trip","Index","Trip")</li>
+                            <li class="EndDivider" @if(ctrName=="Search"){<text> class="active"</text>}>@Html.ActionLink("Search", "Search","Equipment")</li>
+                        </ul>
+
+			
+		    </div>
+          
+        </header>
+        <div id="body">
+            @*<div id="nav_bar_locker_left">
+			    <ul >
+			       @RenderSection("leftbar")
+			    </ul>
+			
+		    </div>*@
+
+            <div id="box_box">
+                <section class="content-wrapper main-content clear-fix">
+                    @RenderBody()
+                </section>
+            </div>
+        </div>
+
+        <footer>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

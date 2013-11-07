@@ -14,17 +14,13 @@
         <header>
             <div id="header">
 			    <img id="Logo_in_nav" src="~/Images/traillocker_logo_300px_white.gif" alt="Logo_Up_left" />
-			
-			    <div id="header_in">
-                    <div id="menu">
+                        @{string ctrName = ViewContext.RouteData.Values["action"].ToString();}
                         <ul>
-                            <li>@Html.ActionLink("MyLocker","Index","Equipment")</li>
+                            <li @if(ctrName=="Index"){<text> class="active"</text>}>@Html.ActionLink("MyLocker","Index","Equipment")</li>
                             <li>@Html.ActionLink("Plan Trip","Index","Trip")</li>
-                            <li class="EndDivider">@Html.ActionLink("Search", "Search","Equipment")</li>
+                            <li class="EndDivider" @if(ctrName=="Search"){<text> class="active"</text>}>@Html.ActionLink("Search", "Search","Equipment")</li>
                         </ul>
 
-			        </div>
-               </div>
 			
 		    </div>
           

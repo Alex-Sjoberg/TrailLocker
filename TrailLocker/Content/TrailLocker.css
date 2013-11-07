@@ -3,6 +3,7 @@
 	src: url('Lato-Lig.ttf')
 		,url('Lato-Lig.eot'); 
 }
+
 @font-face{
 	font-family: Lato-Reg;
 	src: url('Lato-Reg.ttf')
@@ -10,14 +11,15 @@
 }
 
 html{
-	min-height:100%;position:relative
+	min-height:100%;
+    position:relative;
+    padding: 0;
 }
 
 body {
     margin: 0;
     font-family: "Lato-Reg", sans-serif;
     background-color: #fff;
-
 }
 
 body#index{
@@ -37,31 +39,23 @@ body#home{
 
 
 #header {
-	    width: 100%;
-	    height: 75px;
-	    background-color: #000;
-
-	}
-
-#header_in {
-	width: 960px;
+	width: 100%;
 	height: 75px;
-	margin: auto;
-	position: relative;
+	background-color: #000;
 }
 
-#menu {
-	left: 00px;
-	margin-right: 0px;
-
+#header ul {
+    left: 8%;
+    position: fixed;
+    top: -17px;
 }
 
-#menu ul li {
+#header ul li {
 	float: left;
 	display: inline;
 }
 
-#menu ul li a {
+#header ul li a {
 	color: #fff;
 	font-weight: 300;
 	font-size: 70%;
@@ -74,16 +68,16 @@ body#home{
 	border-left: 2px solid #fff;
 }
 
-#menu li.EndDivider {
+#header li.EndDivider {
 	border-right: 2px solid #fff;
 }
 
-#menu ul li a:hover {
+#header ul li a:hover {
 	border-top: 10px solid #fff;
 	padding: 19px 10px 0 10px;
 }
 
-#menu ul li a.active {
+#header ul li a.active {
 	border-top: 10px solid #fff;
 	padding: 19px 10px 0 10px;
 }
@@ -105,86 +99,47 @@ body#home{
 }
 
 
-	#Logo_Up_left{
-		position:relative;
-		Width:150px;
-		
-	}
-	#Logo_in_nav{
-		float:left;
-		height:90%;
-		margin:3px;
-	}
+#Logo_Up_left{
+	position:relative;
+	Width:150px;	
+}
+#Logo_in_nav{
+	height:90%;
+	margin:3px;
+}
 	
-	#Locker_Logo_in_nav{
-		position:relative;
-		Height:90%;
-		padding:3px;
-		
-	}
-	#nav_bar{
-		position:absolute;
-		width:8%;
-   		top:0;
-   		bottom:0;
-   		left:0;
-    	right:0;
-   		overflow:hidden;
-   		z-index:-1;
-		background: -moz-linear-gradient(top, rgba(58,58,58,0.6) 0%, rgba(58,58,58,0.6) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(58,58,58,0.6)), color-stop(100%,rgba(58,58,58,0.6))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, rgba(58,58,58,0.6) 0%,rgba(58,58,58,0.6) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, rgba(58,58,58,0.6) 0%,rgba(58,58,58,0.6) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top, rgba(58,58,58,0.6) 0%,rgba(58,58,58,0.6) 100%); /* IE10+ */
-		background: linear-gradient(to bottom, rgba(58,58,58,0.6) 0%,rgba(58,58,58,0.6) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#993a3a3a', endColorstr='#993a3a3a',GradientType=0 ); /* IE6-9 */
-	}
-	#nav_bar_footer{
-		display:none;
-	}
-		
-	#form{
-		font-size:60px;
-		color:white;
-		font-family:Lato-Lig;
-		position:relative;
-		display:none;
-		text-align:center;
-		margin-left: auto;
-		margin-right:auto;
-		margin-top:25px;
-		
-		
-	}
-		
-		#nav_bar_locker_top{
-		position:absolute;
-		background-color:black;
-		height:10%;
-   		top:0;
-   		left:0;
-    	right:0;
-   		overflow:hidden;
-   		z-index:-1
-		}
-		
-		#nav_bar_locker_bottom{
-		display:none;
-	}
+#Locker_Logo_in_nav{
+	position:relative;
+	Height:90%;
+	padding:3px;		
+}
 	
-		#nav_bar_locker_left{
-		position:absolute;
-		width:100px;
-   		top:20%;
-   		bottom:0;
-   		left:0;
-    	right:0;
-   		overflow:hidden;
-   		font-family:Lato-Lig;
-		color:white; 
-   		background-color:black;
-   		font-size:80%;
-		}
+		
+#form{
+	font-size:60px;
+	color:white;
+	font-family:Lato-Lig;
+	position:relative;
+	display:none;
+	text-align:center;
+	margin-left: auto;
+	margin-right:auto;
+	margin-top:25px;	
+}
+	
+#nav_bar_locker_left{
+    position:absolute;
+    width:100px;
+    top:15%;
+    bottom:25%;
+    left:0;
+    right:0;
+    overflow:hidden;
+    font-family:Lato-Lig;
+    color:white; 
+    background-color:black;
+    font-size:80%;
+}
 		
 }
 		
@@ -200,70 +155,59 @@ body#home{
 	height:200px;
 }
 	
-
-
 #facebook_login_button{
-		background-image:url('../Images/facebook_login_button.png');
-		background-repeat: no-repeat;
-		background-size: 260px;
-		height: 45px;
-		width: 260px;
-		margin: 0 auto;
-		display: block;
-	}
-
-
+	background-image:url('../Images/facebook_login_button.png');
+	background-repeat: no-repeat;
+	background-size: 260px;
+	height: 45px;
+	width: 260px;
+	margin: 0 auto;
+	display: block;
+}
 
 #heading{ 
-text-align:center;
-display:none;
-font-size:72px;
-font-family:Lato-Lig;
-text-decoration:none;
-color:white; 
-padding:10px;
+    text-align:center;
+    display:none;
+    font-size:72px;
+    font-family:Lato-Lig;
+    text-decoration:none;
+    color:white; 
+    padding:10px;
 }
 #box_box{
-position:absolute;
-top:20%;
-left:15%;
-
+    position:absolute;
+    top:15%;
+    left:10%;
 }
 
 .stuff_boxes{
-display: inline-block;
-width:200px;
-height:200px;
-border:2px;
-border-style:solid;
-border-color:#000000;
-z-index:2;
-
-
-
+    display: inline-block;
+    width:200px;
+    height:200px;
+    border:2px;
+    border-style:solid;
+    border-color:#000000;
+    z-index:2;
 }
+
 .stuff_boxes:hover{
-
-background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.5) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0.5))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.5) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.5) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.5) 100%); /* IE10+ */
-background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.5) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
-
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.5) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0.5))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.5) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.5) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.5) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.5) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
 }
 
 #nav_bar_locker{
-color:white;
-position:absolute;
-font-family:Lato-Lig;
-z-index:-1;
-left:20%;
-text-align:center;
-
-height:100%;
-border:2px;
-
+    color:white;
+    position:absolute;
+    font-family:Lato-Lig;
+    z-index:-1;
+    left:20%;
+    text-align:center;
+    height:100%;
+    border:2px;
 }
 

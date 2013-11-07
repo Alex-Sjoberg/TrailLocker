@@ -24,6 +24,7 @@ namespace TrailLocker.Controllers
         public TripController()
             : this(new Repository<Trip>(new DatabaseUnitOfWork()))
         {
+            
         }
 
         public TripController(Repository<Trip> repo)

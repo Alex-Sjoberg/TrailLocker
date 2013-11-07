@@ -83,8 +83,12 @@ namespace TrailLocker.Tests.Controllers
             Assert.IsNotNull(result);
             IEnumerable<Trip> model = result.Model as IEnumerable<Trip>;
             Assert.AreEqual(2, model.Count());
-            Assert.IsTrue(model.Contains(trip2changed));
-            Assert.IsFalse(model.Contains(trip2));
+            Trip temp = model.ElementAt(1);
+            Assert.AreEqual(trip2changed.TripID, temp.TripID);
+            Assert.AreEqual(trip2changed.DestinationID, temp.DestinationID);
+            Assert.AreEqual(trip2changed.StartDate, temp.StartDate);
+            Assert.AreEqual(trip2changed.EndDate, temp.EndDate);
+            
         }
 
         [TestMethod]

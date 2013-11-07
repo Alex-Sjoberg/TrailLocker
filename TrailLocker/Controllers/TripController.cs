@@ -67,8 +67,12 @@ namespace TrailLocker.Controllers
         [HttpPost]
         public ActionResult EditTripInDatabase(Trip trip)
         {
-            tripRepository.Attach(trip);
+            Trip oldTrip = tripRepository.FindBy(T => T.TripID == trip.TripID).Single();
+            oldTrip.StartDate = trip.StartDate;
+            oldTrip.EndDate = trip.EndDate;
+            oldTrip.DestinationID = trip.DestinationID;
             tripRepository.Commit();
+            
             return RedirectToAction("Index");
         }
 

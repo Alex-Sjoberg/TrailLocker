@@ -15,10 +15,6 @@
     @Html.ActionLink("Show Default Equipment", "Default")
 </p>
 
-<p>
-    @Html.ActionLink("Show Backpack", "Backpack")
-</p>
-
 <table>
     <tr>
         <th>
@@ -36,9 +32,6 @@
         <th>
             @Html.DisplayNameFor(model => model.IsDefault)
         </th>
-        <!--<th>
-            //Html.DisplayNameFor(model => model.inBackpack)
-        </th>-->
         <th></th>
     </tr>
 
@@ -59,9 +52,6 @@
         <td>
             @Html.DisplayFor(modelItem => item.IsDefault)
         </td>
-        <!--<td>
-            Html.DisplayFor(modelItem => item.inBackpack)
-        </td>-->
         <td>
             @Html.ActionLink("Edit", "Edit", new { EquipmentID=item.EquipmentID }) |
             @Html.ActionLink("Delete", "Delete", new { EquipmentID=item.EquipmentID })

@@ -22,7 +22,7 @@ namespace TrailLocker
             //    consumerKey: "",
             //    consumerSecret: "");
 
-            OAuthWebSecurity.RegisterFacebookClient(appId: "603680269694814", appSecret: "c45641c9de012c138f1658aa95a6c27d");
+            OAuthWebSecurity.RegisterFacebookClient(appId: "1424766361075600", appSecret: "d23d50adbcd2ffc1077714cd63b7976d");
 
             //OAuthWebSecurity.RegisterGoogleClient();
         }

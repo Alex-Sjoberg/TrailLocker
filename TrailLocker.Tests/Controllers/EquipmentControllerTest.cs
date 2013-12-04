@@ -211,7 +211,7 @@ namespace TrailLocker.Tests.Controllers
             Assert.IsFalse(model.Contains(equip1));
             Assert.IsTrue(model.Contains(equip2));
         }
-
+/*
         [TestMethod]
         public void AddShouldAddNewEquipmentToRepository()
         {
@@ -223,7 +223,7 @@ namespace TrailLocker.Tests.Controllers
             IEnumerable<Equipment> model = result.Model as IEnumerable<Equipment>;
             Assert.AreEqual(3, model.Count());
             Assert.IsTrue(model.Contains(equip3));
-        }
+        }*/
 
         [TestMethod]
         public void EditShouldChangePreviouslyAddedEquipment()

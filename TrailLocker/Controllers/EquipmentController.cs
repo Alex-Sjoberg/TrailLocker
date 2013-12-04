@@ -68,7 +68,7 @@ namespace TrailLocker.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Add(Equipment equipmentModel)
+        public ActionResult Add(GeneralEquipment equipmentModel)
         {
             equipmentRepository.Add(equipmentModel);
             equipmentRepository.Commit();

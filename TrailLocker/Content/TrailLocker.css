@@ -16,24 +16,34 @@ html{
     padding: 0;
 }
 
+
 body {
-    margin: 0;
+    background-image:url('../Images/spring-2011-bg.jpg');
+    background-position: top center;
+	background-repeat:no-repeat;
+    margin: 0 auto;
+    width: 1200px;
     font-family: "Lato-Reg", sans-serif;
-    background-color: #fff;
+    background-color: #323031;
 }
 
 body#index{
-	height:100%;
+    height:1000px;;
 	background-color:black;
-	background-image:url('../Images/Background.png');
-	background-position:  center;
-	background-repeat:no-repeat;
+	background-image:url('../Images/background.jpg');
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
 }
+
+
 body#home{
-	height:100%;
+    height:1000px;
 	background-color:black;
-	background-image:url('../Images/Background.png');
-	background-position:  center;
+	background-image:url('../Images/background.jpg');
+	background-position: top center;
 	background-repeat:no-repeat;
 }
 
@@ -45,14 +55,19 @@ body#home{
 }
 
 #header ul {
-    left: 8%;
-    position: fixed;
+    left: 28%;
+    position: absolute;
     top: -17px;
 }
 
 #header ul li {
 	float: left;
 	display: inline;
+}
+
+fieldset
+{
+    border: none;
 }
 
 #header ul li a {
@@ -100,8 +115,9 @@ body#home{
 
 
 #Logo_Up_left{
-	position:relative;
-	Width:150px;	
+	position:absolute;
+	Width:150px;
+    left: -.1%;	
 }
 #Logo_in_nav{
 	height:90%;
@@ -117,14 +133,14 @@ body#home{
 		
 #form{
 	font-size:60px;
-	color:white;
+	color:black;
 	font-family:Lato-Lig;
 	position:relative;
 	display:none;
 	text-align:center;
-	margin-left: auto;
-	margin-right:auto;
-	margin-top:25px;	
+	margin-left: 9.5%;
+	margin-right:9.5%;
+	margin-top:200px;	
 }
 	
 #nav_bar_locker_left{
@@ -174,11 +190,21 @@ body#home{
     color:white; 
     padding:10px;
 }
-#box_box{
-    position:absolute;
-    top:15%;
-    left:10%;
+
+.gradient
+{
+    background: url('../Images/gradient.png') no-repeat top center;
+    height: 1100px;
+    margin-left: 20px;
+    width: 1200px;
 }
+
+#box_box{
+    position:relative;
+    margin: 0 auto;
+    padding-top: 50px;
+    left:380px;
+
 
 .stuff_boxes{
     display: inline-block;

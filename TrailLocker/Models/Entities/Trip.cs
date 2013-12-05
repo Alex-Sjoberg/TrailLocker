@@ -23,5 +23,10 @@ namespace TrailLocker.Models.Entities
         public DateTime EndDate { get; set; }
 
         #endregion
+
+        public Trip(){
+
+        }
+
     }
 }

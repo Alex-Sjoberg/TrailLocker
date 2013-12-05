@@ -10,9 +10,10 @@
 
 @using (Html.BeginForm("AddTrip", "Trip", FormMethod.Post))
 {
-   /* <div>
-        Trip Name: @Html.EditorFor(model => model.TripName)
-    </div>*/
+    
+    <div>
+        Trip ID: @Html.EditorFor(model => model.TripID)
+    </div>
     
     <div>
         Destination: @Html.EditorFor(model => model.DestinationID)

@@ -49,10 +49,10 @@ namespace TrailLocker.Controllers
 
         // POST: /Trip/AddTrip
         [HttpPost]
-        public ActionResult AddTrip(Trip trip)
+        public ActionResult AddTrip(Trip tripModel)
         {
             //Add trip to database
-            tripRepository.Add(trip);
+            tripRepository.Add(tripModel);
             tripRepository.Commit();
             return RedirectToAction("Index");
         }

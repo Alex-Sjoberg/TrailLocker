@@ -191,6 +191,10 @@
     <Content Include="Content\TrailLocker.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\background.jpg" />
+    <Content Include="Images\Eourq.jpg" />
+    <Content Include="Images\gradient.png" />
+    <Content Include="Images\spring-2011-bg.jpg" />
     <Content Include="Images\traillocker_logo_3000px_black.png" />
     <Content Include="Images\traillocker_logo_3000px_white.png" />
     <Content Include="Images\traillocker_logo_300px_white.gif" />
@@ -198,7 +202,6 @@
     <Content Include="Scripts\events.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Images\08_BM_35_060.jpeg" />
-    <Content Include="Images\Background.png" />
     <Content Include="Views\HTMLstuff\events.js" />
     <Content Include="Images\facebook_login_button.png" />
     <Content Include="Views\HTMLstuff\home.html" />

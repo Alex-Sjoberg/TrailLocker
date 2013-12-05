@@ -2,12 +2,12 @@
     ViewBag.Title = "Home Page";
 }
 <div id="center_logo">
-	<img id="Logo_Up_left" src="~/Images/traillocker_logo_3000px_white.png" alt="Logo_Up_left" />
+	<img id="Logo_Up_left" src="~/Images/traillocker_logo_3000px_black.png" alt="Logo_Up_left" />
 </div>
 <br />
 		
 <div id="form">
-	PLAN YOUR NEXT EXPEDITION		<br /><br /><br /><br /><br />
+	PREPARE TO EXPLORE		<br /><br /><br /><br /><br />
     <form action="@Url.Action("ExternalLogin", "Account", new { ReturnUrl = ViewBag.ReturnUrl })", method="post">
         @Html.AntiForgeryToken()
 	    <button id="facebook_login_button" type="submit" name="provider" value="facebook" id="facebook_login_button"></button>

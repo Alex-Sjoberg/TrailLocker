@@ -37,7 +37,7 @@ namespace TrailLocker.Controllers
         {
             if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
             {
-                return RedirectToLocal(returnUrl);
+                return RedirectToAction("Index", "Equipment");
             }
 
             // If we got this far, something failed, redisplay form
@@ -225,7 +225,7 @@ namespace TrailLocker.Controllers
 
             if (OAuthWebSecurity.Login(result.Provider, result.ProviderUserId, createPersistentCookie: false))
             {
-                return RedirectToLocal(returnUrl);
+                return RedirectToAction("Index", "Equipment");
             }
 
             if (User.Identity.IsAuthenticated)
